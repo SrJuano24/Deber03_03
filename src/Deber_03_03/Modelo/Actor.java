@@ -8,36 +8,45 @@ package Deber_03_03.Modelo;
  *
  * @author Juano
  */
-public class Actor  {
+public class Actor {
 
-    private int fechaNacimiento;
-    private int nominaciones;
+    private String nombreActor;
     private String lugarNacimiento;
-    private String nombre;
+    private int edad;
+    private String genero;
+    private String nominaciones;
+    private int numeroNominaciones;
 
-    public Actor(int fC, int n, String lG, String no) {
-        this.fechaNacimiento = fC;
-        this.nominaciones = n;
-        this.lugarNacimiento = lG;
-        this.nombre = no;
-    }
-
-   
-    
-    public int getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(int fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
-    public int getNominaciones() {
-        return nominaciones;
-    }
-
-    public void setNominaciones(int nominaciones) {
+    public Actor(String nombreActor, String lugarNacimiento, int edad, String genero, String nominaciones, int numeroNominaciones) {
+        this.nombreActor = nombreActor;
+        this.lugarNacimiento = lugarNacimiento;
+        this.edad = edad;
+        this.genero = genero;
         this.nominaciones = nominaciones;
+        this.numeroNominaciones = numeroNominaciones;
+    }
+
+    public String clasificacionNominacion() {
+        var retorno = "Desconocido";
+        if (numeroNominaciones < 2) {
+            retorno = "Se considera un buen actor";
+        } else {
+            if (numeroNominaciones < 5) {
+                retorno = "Se considera un muy buen actor";
+            } else {
+                retorno = "Se considera un excelente actor";
+            }
+
+        }
+        return retorno;
+    }
+
+    public String getNombreActor() {
+        return nombreActor;
+    }
+
+    public void setNombreActor(String nombreActor) {
+        this.nombreActor = nombreActor;
     }
 
     public String getLugarNacimiento() {
@@ -48,20 +57,45 @@ public class Actor  {
         this.lugarNacimiento = lugarNacimiento;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getNominaciones() {
+        return nominaciones;
+    }
+
+    public void setNominaciones(String nominaciones) {
+        this.nominaciones = nominaciones;
+    }
+
+    public int getNumeroNominaciones() {
+        return numeroNominaciones;
+    }
+
+    public void setNumeroNominaciones(int numeroNominaciones) {
+        this.numeroNominaciones = numeroNominaciones;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
     @Override
     public String toString() {
-        return "Actor{" + "fechaNacimiento=" + fechaNacimiento + ", nominaciones=" + nominaciones + ", lugarNacimiento=" + lugarNacimiento + ", nombre=" + nombre + '}';
+        return "Actor{" + "nombreActor=" + nombreActor + ", lugarNacimiento=" + 
+                lugarNacimiento + ", edad=" + edad + ", genero=" + genero +
+                ", nominaciones=" + nominaciones + ", numeroNominaciones=" +
+                numeroNominaciones +" basado en esto el actor : "
+                +this.clasificacionNominacion()+ '}';
     }
-
-    
-    
 
 }

@@ -13,9 +13,18 @@ import Deber_03_03.Control.PeliculaControl;
 public class Principal {
 
     public static void main(String[] args) {
+
+        var ventanaPelicula = new Ventana_Pelicula();
+      // ventanaPelicula.setVisible(true);
+       ventanaPelicula.setLocation(450,200);
+       //  var ventanaActor = new Ventana_Actor();
+        //ventanaActor.setVisible(true);
+        //ventanaActor.setLocation(450,200);
         
-       // var ventanaPelicula = new Ventana_Pelicula("");
-        var ventanaPelicul = new Ventana_Prueba("");
+        
+        
+        // var ventanaPelicul = new Ventana_Pelicula1("");
+        var ventanaActo = new Ventana_Actor1("");
     }
 
 }

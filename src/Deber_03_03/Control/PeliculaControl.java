@@ -24,8 +24,8 @@ public class PeliculaControl {
     public String crear(String[] data) {
         var retorno = "No se pudo crear la pelicula:";
 
-        var codigoGenero = Integer.valueOf(data[0]).intValue();
-        var nombrePelicula = data[1];
+        var nombrePelicula = data[0];
+        var codigoGenero = data[1];
         var yearLanzamiento = Integer.valueOf(data[2]).intValue();
         var idioma = data[3];
         var clasificacion = data[4];
@@ -40,9 +40,10 @@ public class PeliculaControl {
                 retorno += " Duracion de pelicula incorrecto.";
 
             } else {
-                var pelicula = new Pelicula(codigoGenero, nombrePelicula, yearLanzamiento, idioma, clasificacion, duracion, reseña);
+                var pelicula = new Pelicula(nombrePelicula, codigoGenero, yearLanzamiento, idioma, clasificacion, duracion, reseña);
 
                 this.peliculaServiceImpl.crear(pelicula);
+                retorno = "Pelicula: "+pelicula.getNombrePelicula()+" Creada correctamente: ";
             }
         }
         return retorno;

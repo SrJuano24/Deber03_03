@@ -11,17 +11,21 @@ package Deber_03_03.Modelo;
 public class Personaje {
 
     private String nombrePersonaje;
+    private int edadPersonaje;
     private String rol;
+    private int calificacion;
+    private String descripcionPersonaje;
+
     private Actor interprete;
     private Pelicula film;
 
-    public Personaje(String nP, String r, Actor i, Pelicula f) {
-
-        this.nombrePersonaje = nP;
-        this.rol = r;
-        this.interprete = i;
-        this.film = f;
-
+    public Personaje(String nombrePersonaje, int edadPersonaje, String rol, int calificacion, String descripcionPersonaje) {
+        this.nombrePersonaje = nombrePersonaje;
+        this.edadPersonaje = edadPersonaje;
+        this.rol = rol;
+        this.calificacion = calificacion;
+        this.descripcionPersonaje = descripcionPersonaje;
+        
     }
 
     public String getNombrePersonaje() {
@@ -56,11 +60,37 @@ public class Personaje {
         this.film = film;
     }
 
-    @Override
-    public String toString() {
-        return "Personaje{" + "nombrePersonaje=" + nombrePersonaje + ", rol=" + rol + ", interprete=" + interprete + ", film=" + film + '}';
+    public int getEdadPersonaje() {
+        return edadPersonaje;
     }
 
-   
+    public void setEdadPersonaje(int edadPersonaje) {
+        this.edadPersonaje = edadPersonaje;
+    }
+
+    public int getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(int calificacion) {
+        this.calificacion = calificacion;
+    }
+
+    public String getDescripcionPersonaje() {
+        return descripcionPersonaje;
+    }
+
+    public void setDescripcionPersonaje(String descripcionPersonaje) {
+        this.descripcionPersonaje = descripcionPersonaje;
+    }
+
+    @Override
+    public String toString() {
+        return "Personaje{" + "nombrePersonaje=" + nombrePersonaje
+                + ", edadPersonaje=" + edadPersonaje + ", rol="
+                + rol + ", calificacion=" + calificacion
+                + ", descripcionPersonaje=" + descripcionPersonaje
+                + ", interprete=" + interprete + ", film=" + film + '}';
+    }
 
 }

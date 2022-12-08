@@ -4,23 +4,25 @@
  */
 package Deber_03_03.Modelo;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Juano
  */
 public class Pelicula {
 
-    private int codigoGenero;
     private String nombrePelicula;
+    private String Genero;
     private int yearLanzamiento;
     private String idioma;
     private String clasificacion;
     private int duracion;
     private String reseña;
 
-    public Pelicula(int codigoGenero, String nombrePelicula, int yearLanzamiento, String idioma, String clasificacion, int duracion, String reseña) {
-        this.codigoGenero = codigoGenero;
+    public Pelicula(String nombrePelicula, String Genero, int yearLanzamiento, String idioma, String clasificacion, int duracion, String reseña) {
         this.nombrePelicula = nombrePelicula;
+        this.Genero = Genero;
         this.yearLanzamiento = yearLanzamiento;
         this.idioma = idioma;
         this.clasificacion = clasificacion;
@@ -46,12 +48,12 @@ public class Pelicula {
         return retorno;
     }
 
-    public int getCodigoGenero() {
-        return codigoGenero;
+    public String getGenero() {
+        return Genero;
     }
 
-    public void setCodigoGenero(int codigoGenero) {
-        this.codigoGenero = codigoGenero;
+    public void setGenero(String Genero) {
+        this.Genero = Genero;
     }
 
     public String getNombrePelicula() {
@@ -104,11 +106,12 @@ public class Pelicula {
 
     @Override
     public String toString() {
-        return "Pelicula{" + "codigoGenero=" + codigoGenero
-                + ", nombrePelicula=" + nombrePelicula + ", yearLanzamiento="
-                + yearLanzamiento + ", idioma=" + idioma + ", clasificacion="
-                + clasificacion + ", duracion=" + duracion + ", rese\u00f1a="
-                + reseña + '}';
+        return "Pelicula {" + "nombrePelicula=" + nombrePelicula + ", Genero=" 
+                + Genero + ", yearLanzamiento=" + yearLanzamiento 
+                + ", idioma=" + idioma + ", clasificacion=" 
+                + clasificacion +", esta clasificacion: "
+                +this.getClasificacionEdad()+ ", duracion=" + duracion +" horas"+ 
+                ", reseña=" + reseña + '}';
     }
 
 }
