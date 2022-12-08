@@ -15,16 +15,17 @@ public class Principal {
     public static void main(String[] args) {
 
         var ventanaPelicula = new Ventana_Pelicula();
-      // ventanaPelicula.setVisible(true);
-       ventanaPelicula.setLocation(450,200);
-       //  var ventanaActor = new Ventana_Actor();
-        //ventanaActor.setVisible(true);
-        //ventanaActor.setLocation(450,200);
-        
-        
-        
+        ventanaPelicula.setVisible(true);
+        ventanaPelicula.setLocation(450, 200);
+        var ventanaActor = new Ventana_Actor();
+        ventanaActor.setVisible(true);
+        ventanaActor.setLocation(450,200);
+        var ventanaPersonaje = new Ventana_Personaje();
+        ventanaPersonaje.setVisible(true);
+        ventanaPersonaje.setLocation(450, 200);
+
         // var ventanaPelicul = new Ventana_Pelicula1("");
-        var ventanaActo = new Ventana_Actor1("");
+        //var ventanaActo = new Ventana_Actor1("");
     }
 
 }

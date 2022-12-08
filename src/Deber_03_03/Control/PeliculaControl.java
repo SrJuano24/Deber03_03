@@ -24,13 +24,14 @@ public class PeliculaControl {
     public String crear(String[] data) {
         var retorno = "No se pudo crear la pelicula:";
 
-        var nombrePelicula = data[0];
-        var codigoGenero = data[1];
-        var yearLanzamiento = Integer.valueOf(data[2]).intValue();
-        var idioma = data[3];
-        var clasificacion = data[4];
-        var duracion = Integer.valueOf(data[5]).intValue();
-        var reseña = data[6];
+        var codigoPelicula = Integer.valueOf(data[0]).intValue();
+        var nombrePelicula = data[1];
+        var Genero = data[2];
+        var yearLanzamiento = Integer.valueOf(data[3]).intValue();
+        var idioma = data[4];
+        var clasificacion = data[5];
+        var duracion = Integer.valueOf(data[6]).intValue();
+        var reseña = data[7];
 
         if (yearLanzamiento < 1980) {
             retorno += " Año de lanzamiento incorrecto.";
@@ -40,10 +41,10 @@ public class PeliculaControl {
                 retorno += " Duracion de pelicula incorrecto.";
 
             } else {
-                var pelicula = new Pelicula(nombrePelicula, codigoGenero, yearLanzamiento, idioma, clasificacion, duracion, reseña);
+                var pelicula = new Pelicula(codigoPelicula, nombrePelicula, Genero, yearLanzamiento, idioma, clasificacion, duracion, reseña);
 
                 this.peliculaServiceImpl.crear(pelicula);
-                retorno = "Pelicula: "+pelicula.getNombrePelicula()+" Creada correctamente: ";
+                retorno = "Pelicula: " + pelicula.getNombrePelicula() + " Creada correctamente: ";
             }
         }
         return retorno;

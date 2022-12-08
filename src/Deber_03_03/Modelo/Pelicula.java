@@ -12,6 +12,7 @@ import java.time.LocalDate;
  */
 public class Pelicula {
 
+    private int codigoPelicula;
     private String nombrePelicula;
     private String Genero;
     private int yearLanzamiento;
@@ -20,7 +21,8 @@ public class Pelicula {
     private int duracion;
     private String reseña;
 
-    public Pelicula(String nombrePelicula, String Genero, int yearLanzamiento, String idioma, String clasificacion, int duracion, String reseña) {
+    public Pelicula(int codigoPelicula, String nombrePelicula, String Genero, int yearLanzamiento, String idioma, String clasificacion, int duracion, String reseña) {
+        this.codigoPelicula = codigoPelicula;
         this.nombrePelicula = nombrePelicula;
         this.Genero = Genero;
         this.yearLanzamiento = yearLanzamiento;
@@ -46,6 +48,14 @@ public class Pelicula {
                 throw new AssertionError();
         }
         return retorno;
+    }
+
+    public int getCodigoPelicula() {
+        return codigoPelicula;
+    }
+
+    public void setCodigoPelicula(int codigoPelicula) {
+        this.codigoPelicula = codigoPelicula;
     }
 
     public String getGenero() {
@@ -106,12 +116,14 @@ public class Pelicula {
 
     @Override
     public String toString() {
-        return "Pelicula {" + "nombrePelicula=" + nombrePelicula + ", Genero=" 
-                + Genero + ", yearLanzamiento=" + yearLanzamiento 
-                + ", idioma=" + idioma + ", clasificacion=" 
-                + clasificacion +", esta clasificacion: "
-                +this.getClasificacionEdad()+ ", duracion=" + duracion +" horas"+ 
-                ", reseña=" + reseña + '}';
+        return "Pelicula{" + "codigoPelicula=" + codigoPelicula
+                + ", nombrePelicula=" + nombrePelicula + ", Genero="
+                + Genero + ", yearLanzamiento=" + yearLanzamiento
+                + ", idioma=" + idioma + ", clasificacion="
+                + clasificacion + ", esta clasificacion: "
+                + this.getClasificacionEdad()
+                + ", duracion=" + duracion+" horas "
+                + ", rese\u00f1a=" + reseña + '}';
     }
 
 }

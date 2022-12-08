@@ -23,12 +23,13 @@ public class ActorControl {
     public String crear(String[] data) {
         var retorno = "No se pudo crear el actor:";
 
-        var nombreActor = data[0];
-        var lugarNacimiento = data[1];
-        var edad = Integer.valueOf(data[2]).intValue();
-        var genero = data[3];
-        var nominaciones = data[4];
-        var numeroNominaciones = Integer.valueOf(data[5]).intValue();
+        var codigoActor = Integer.valueOf(data[0]).intValue();
+        var nombreActor = data[1];
+        var lugarNacimiento = data[2];
+        var edad = Integer.valueOf(data[3]).intValue();
+        var genero = data[4];
+        var nominaciones = data[5];
+        var numeroNominaciones = Integer.valueOf(data[6]).intValue();
 
         if (edad < 1) {
             retorno += " Edad incorrecta.";
@@ -38,10 +39,10 @@ public class ActorControl {
                 retorno += " Numero de nominaciones incorrecto.";
 
             } else {
-                var actor = new Actor(nombreActor, lugarNacimiento, edad, genero, nominaciones, numeroNominaciones);
+                var actor = new Actor(codigoActor, nombreActor, lugarNacimiento, edad, genero, nominaciones, numeroNominaciones);
 
                 this.actorServiceImpl.crear(actor);
-                 retorno = "Actor: "+actor.getNombreActor()+" Creado correctamente: ";
+                retorno = "Actor: " + actor.getNombreActor() + " Creado correctamente: ";
             }
         }
         return retorno;

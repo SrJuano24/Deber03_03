@@ -10,6 +10,7 @@ package Deber_03_03.Modelo;
  */
 public class Actor {
 
+    private int codigoActor;
     private String nombreActor;
     private String lugarNacimiento;
     private int edad;
@@ -17,7 +18,8 @@ public class Actor {
     private String nominaciones;
     private int numeroNominaciones;
 
-    public Actor(String nombreActor, String lugarNacimiento, int edad, String genero, String nominaciones, int numeroNominaciones) {
+    public Actor(int codigoActor, String nombreActor, String lugarNacimiento, int edad, String genero, String nominaciones, int numeroNominaciones) {
+        this.codigoActor = codigoActor;
         this.nombreActor = nombreActor;
         this.lugarNacimiento = lugarNacimiento;
         this.edad = edad;
@@ -39,6 +41,14 @@ public class Actor {
 
         }
         return retorno;
+    }
+
+    public int getCodigoActor() {
+        return codigoActor;
+    }
+
+    public void setCodigoActor(int codigoActor) {
+        this.codigoActor = codigoActor;
     }
 
     public String getNombreActor() {
@@ -91,11 +101,14 @@ public class Actor {
 
     @Override
     public String toString() {
-        return "Actor{" + "nombreActor=" + nombreActor + ", lugarNacimiento=" + 
-                lugarNacimiento + ", edad=" + edad + ", genero=" + genero +
-                ", nominaciones=" + nominaciones + ", numeroNominaciones=" +
-                numeroNominaciones +" basado en esto el actor : "
-                +this.clasificacionNominacion()+ '}';
+        return "Actor{" + "codigoActor=" + codigoActor + ", nombreActor=" 
+                + nombreActor + ", lugarNacimiento=" + lugarNacimiento 
+                + ", edad=" + edad + ", genero=" + genero + ", nominaciones=" 
+                + nominaciones + ", numeroNominaciones=" + numeroNominaciones 
+                + " basado en esto el actor : "
+                + this.clasificacionNominacion()+'}';
     }
 
+    
+    
 }

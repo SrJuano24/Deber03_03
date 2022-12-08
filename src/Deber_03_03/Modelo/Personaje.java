@@ -25,7 +25,7 @@ public class Personaje {
         this.rol = rol;
         this.calificacion = calificacion;
         this.descripcionPersonaje = descripcionPersonaje;
-        
+
     }
 
     public String getNombrePersonaje() {
@@ -90,7 +90,7 @@ public class Personaje {
                 + ", edadPersonaje=" + edadPersonaje + ", rol="
                 + rol + ", calificacion=" + calificacion
                 + ", descripcionPersonaje=" + descripcionPersonaje
-                + ", interprete=" + interprete + ", film=" + film + '}';
+                + ", interprete="  + '}';
     }
 
 }
