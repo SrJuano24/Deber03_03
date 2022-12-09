@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class PersonajeServiceImpl implements PersonajeService {
 
-    private final List<Personaje> personajeList;
+        private static List<Personaje> personajeList;
 
     public PersonajeServiceImpl() {
         this.personajeList = new ArrayList<>();

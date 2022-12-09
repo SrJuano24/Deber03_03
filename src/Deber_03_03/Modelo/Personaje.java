@@ -11,21 +11,21 @@ package Deber_03_03.Modelo;
 public class Personaje {
 
     private String nombrePersonaje;
+    private Pelicula film;
+    private Actor interprete;
     private int edadPersonaje;
     private String rol;
-    private int calificacion;
+    private String calificacion;
     private String descripcionPersonaje;
 
-    private Actor interprete;
-    private Pelicula film;
-
-    public Personaje(String nombrePersonaje, int edadPersonaje, String rol, int calificacion, String descripcionPersonaje) {
+    public Personaje(String nombrePersonaje, Pelicula film, Actor interprete, int edadPersonaje, String rol, String calificacion, String descripcionPersonaje) {
         this.nombrePersonaje = nombrePersonaje;
+        this.film = film;
+        this.interprete = interprete;
         this.edadPersonaje = edadPersonaje;
         this.rol = rol;
         this.calificacion = calificacion;
         this.descripcionPersonaje = descripcionPersonaje;
-
     }
 
     public String getNombrePersonaje() {
@@ -68,11 +68,11 @@ public class Personaje {
         this.edadPersonaje = edadPersonaje;
     }
 
-    public int getCalificacion() {
+    public String getCalificacion() {
         return calificacion;
     }
 
-    public void setCalificacion(int calificacion) {
+    public void setCalificacion(String calificacion) {
         this.calificacion = calificacion;
     }
 
@@ -87,10 +87,10 @@ public class Personaje {
     @Override
     public String toString() {
         return "Personaje{" + "nombrePersonaje=" + nombrePersonaje
-                + ", edadPersonaje=" + edadPersonaje + ", rol="
-                + rol + ", calificacion=" + calificacion
-                + ", descripcionPersonaje=" + descripcionPersonaje
-                + ", interprete="  + '}';
+                + ", film=" + film.getNombrePelicula() + ", interprete="
+                + interprete.getNombreActor() + ", edadPersonaje="
+                + edadPersonaje + ", rol=" + rol + ", calificacion=" + calificacion
+                + ", descripcionPersonaje=" + descripcionPersonaje + '}';
     }
 
 }

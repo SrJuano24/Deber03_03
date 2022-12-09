@@ -4,7 +4,6 @@
  */
 package Deber_03_03.Servicio;
 
-
 import Deber_03_03.Modelo.Pelicula;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,7 @@ import java.util.List;
  */
 public class PeliculaServiceImpl implements PeliculaService {
 
-    private final List<Pelicula> peliculaList;
+       private static List<Pelicula> peliculaList;
 
     public PeliculaServiceImpl() {
         this.peliculaList = new ArrayList<>();
@@ -31,4 +30,15 @@ public class PeliculaServiceImpl implements PeliculaService {
         return this.peliculaList;
     }
 
+    @Override
+    public Pelicula buscarPorCodigo(int codigo) {
+        Pelicula retorno = null;
+        for (var pelicula : this.peliculaList) {
+            if (codigo == pelicula.getCodigoPelicula()) {
+                retorno = pelicula;
+                break;
+            }
+        }
+        return retorno;
+    }
 }

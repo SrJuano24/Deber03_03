@@ -4,7 +4,6 @@
  */
 package Deber_03_03.Servicio;
 
-
 import Deber_03_03.Modelo.Pelicula;
 
 import java.util.List;
@@ -16,9 +15,9 @@ import java.util.List;
 public interface PeliculaService {
 
     public abstract void crear(Pelicula pelicula);
-   
+
+    public Pelicula buscarPorCodigo(int codigo);
 
     public abstract List<Pelicula> listar();
-    
 
 }

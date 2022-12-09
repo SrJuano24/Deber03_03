@@ -15,6 +15,8 @@ public interface ActorService {
 
     public abstract void crear(Actor actor);
 
+    public Actor buscarPorCodigo(int codigo);
+
     public abstract List<Actor> listar();
 
 }

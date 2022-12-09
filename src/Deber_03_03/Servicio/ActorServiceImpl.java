@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class ActorServiceImpl implements ActorService {
 
-    private final List<Actor> actorList;
+    private static List<Actor> actorList;
 
     public ActorServiceImpl() {
         this.actorList = new ArrayList<>();
@@ -23,6 +23,18 @@ public class ActorServiceImpl implements ActorService {
     @Override
     public void crear(Actor actor) {
         this.actorList.add(actor);
+    }
+
+    @Override
+    public Actor buscarPorCodigo(int codigo) {
+        Actor retorno = null;
+        for (var actor : this.actorList) {
+            if (codigo == actor.getCodigoActor()) {
+                retorno = actor;
+                break;
+            }
+        }
+        return retorno;
     }
 
     @Override

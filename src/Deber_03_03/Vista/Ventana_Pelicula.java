@@ -414,7 +414,9 @@ public class Ventana_Pelicula extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
-    private String[] recuperarDatosIngresados() {
+
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         var retorno = new String[8];
 
         retorno[0] = this.jTextField6.getText();
@@ -439,11 +441,7 @@ public class Ventana_Pelicula extends javax.swing.JFrame {
         retorno[5] = this.jComboBox1.getSelectedItem().toString();
         retorno[6] = this.jTextField4.getText();
         retorno[7] = this.jTextField5.getText();
-
-        return retorno;
-    }
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.print(this.peliculaControl.crear(this.recuperarDatosIngresados()));
+        this.peliculaControl.crear(retorno);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed

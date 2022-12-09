@@ -47,7 +47,7 @@ public class PersonajeControl {
                 var personaje = new Personaje(nombrePersonaje, film, interprete, edadPersonaje, rol, calificacion, descripcionPersonaje);
                 this.personajeServiceImpl.crear(personaje);
 
-                retorno = "Actor: " + personaje.getNombrePersonaje() + " Creado correctamente: ";
+                retorno = "Personaje: " + personaje.getNombrePersonaje() + " Creado correctamente: ";
             }
         }
         return retorno;

@@ -352,8 +352,10 @@ public class Ventana_Actor extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
-    private String[] recuperarDatosIngresados() {
-        var retorno = new String[7];
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        String[] retorno = new String[7];
 
         retorno[0] = this.jTextField1.getText();
         retorno[1] = this.jTextField6.getText();
@@ -372,11 +374,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
         }
         retorno[5] = this.jComboBox2.getSelectedItem().toString();
         retorno[6] = this.jTextField5.getText();
-
-        return retorno;
-    }
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.print(this.actorControl.crear(this.recuperarDatosIngresados()));
+        this.actorControl.crear(retorno);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
