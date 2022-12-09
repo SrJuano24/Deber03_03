@@ -122,6 +122,7 @@ public class Ventana_Pelicula extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 15)); // NOI18N
         jLabel7.setText("Ingrese la clasificacion:");
 
+        jComboBox2.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ACCION", "COMEDIA", "TERROR", "ROMANTICA" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +140,7 @@ public class Ventana_Pelicula extends javax.swing.JFrame {
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         idiomaGroup.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 12)); // NOI18N
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("ESPAÑOL");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -149,6 +151,7 @@ public class Ventana_Pelicula extends javax.swing.JFrame {
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
         idiomaGroup.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 12)); // NOI18N
         jRadioButton2.setText("ITALIANO");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,6 +161,7 @@ public class Ventana_Pelicula extends javax.swing.JFrame {
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         idiomaGroup.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 12)); // NOI18N
         jRadioButton3.setText("INGLES");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,6 +169,7 @@ public class Ventana_Pelicula extends javax.swing.JFrame {
             }
         });
 
+        jComboBox1.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,14 +257,16 @@ public class Ventana_Pelicula extends javax.swing.JFrame {
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(347, 347, 347))))
+                                .addGap(347, 347, 347))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()

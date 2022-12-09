@@ -101,14 +101,12 @@ public class Actor {
 
     @Override
     public String toString() {
-        return "Actor{" + "codigoActor=" + codigoActor + ", nombreActor=" 
-                + nombreActor + ", lugarNacimiento=" + lugarNacimiento 
-                + ", edad=" + edad + ", genero=" + genero + ", nominaciones=" 
-                + nominaciones + ", numeroNominaciones=" + numeroNominaciones 
+        return "Actor{" + "codigoActor=" + codigoActor + ", nombreActor="
+                + nombreActor + ", lugarNacimiento=" + lugarNacimiento
+                + ", edad=" + edad + ", genero=" + genero + ", nominaciones="
+                + nominaciones + ", numeroNominaciones=" + numeroNominaciones
                 + " basado en esto el actor : "
-                + this.clasificacionNominacion()+'}';
+                + this.clasificacionNominacion() + '}';
     }
 
-    
-    
 }

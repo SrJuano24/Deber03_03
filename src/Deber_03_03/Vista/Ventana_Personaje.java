@@ -106,6 +106,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
         jLabel3.setText("Ingrese el nombre del personaje:");
 
         jTextField1.setColumns(5);
+        jTextField1.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -121,6 +122,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 15)); // NOI18N
         jLabel6.setText("Ingrese el rol del actor:");
 
+        jComboBox2.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PROTAGONISTA", "ANTAGONISTA", "COPROTAGONISTA" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +131,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
         });
 
         jTextField4.setColumns(5);
+        jTextField4.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -155,6 +158,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
         jLabel9.setText("Descripcion de personaje:");
 
         jTextField5.setColumns(20);
+        jTextField5.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 12)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -179,6 +183,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
         jLabel8.setText("Ingrese el codigo de la pelicula:");
 
         jTextField6.setColumns(20);
+        jTextField6.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
@@ -186,12 +191,14 @@ public class Ventana_Personaje extends javax.swing.JFrame {
         });
 
         jTextField7.setColumns(5);
+        jTextField7.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
             }
         });
 
+        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         calificacionGroup.add(jRadioButton1);
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("1✯");
@@ -201,6 +208,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
         calificacionGroup.add(jRadioButton2);
         jRadioButton2.setText("2✯");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -209,9 +217,16 @@ public class Ventana_Personaje extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         calificacionGroup.add(jRadioButton3);
         jRadioButton3.setText("3✯");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
 
+        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
         calificacionGroup.add(jRadioButton4);
         jRadioButton4.setText("4✯");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -220,8 +235,14 @@ public class Ventana_Personaje extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
         calificacionGroup.add(jRadioButton6);
         jRadioButton6.setText("5✯");
+        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -311,7 +332,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jTextField1.getAccessibleContext().setAccessibleName("");
@@ -326,9 +347,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -386,7 +405,7 @@ public class Ventana_Personaje extends javax.swing.JFrame {
                         retorno[5] = "Cuatro estrellas";
 
                     } else {
-                        if (this.jRadioButton4.isSelected()) {
+                        if (this.jRadioButton6.isSelected()) {
                             retorno[5] = "Cinco estrellas";
                         } else {
                         }
@@ -422,6 +441,14 @@ public class Ventana_Personaje extends javax.swing.JFrame {
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton6ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     /**
      * @param args the command line arguments

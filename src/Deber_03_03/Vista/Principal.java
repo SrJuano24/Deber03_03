@@ -16,16 +16,14 @@ public class Principal {
 
         var ventanaPelicula = new Ventana_Pelicula();
         ventanaPelicula.setVisible(true);
-        ventanaPelicula.setLocation(450, 200);
+        ventanaPelicula.setLocation(10, 20);
         var ventanaActor = new Ventana_Actor();
         ventanaActor.setVisible(true);
-        ventanaActor.setLocation(450,200);
+        ventanaActor.setLocation(630, 20);
         var ventanaPersonaje = new Ventana_Personaje();
         ventanaPersonaje.setVisible(true);
-        ventanaPersonaje.setLocation(450, 200);
+        ventanaPersonaje.setLocation(630, 440);
 
-        // var ventanaPelicul = new Ventana_Pelicula1("");
-        //var ventanaActo = new Ventana_Actor1("");
     }
 
 }

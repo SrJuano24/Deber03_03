@@ -122,7 +122,7 @@ public class Pelicula {
                 + ", idioma=" + idioma + ", clasificacion="
                 + clasificacion + ", esta clasificacion: "
                 + this.getClasificacionEdad()
-                + ", duracion=" + duracion+" horas "
+                + ", duracion=" + duracion + " horas "
                 + ", rese\u00f1a=" + reseña + '}';
     }
 

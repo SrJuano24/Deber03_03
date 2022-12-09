@@ -100,6 +100,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
         jLabel3.setText("Ingrese el codigo del actor:");
 
         jTextField1.setColumns(5);
+        jTextField1.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -118,6 +119,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 15)); // NOI18N
         jLabel7.setText("Ingrese el genero:");
 
+        jComboBox2.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PREMIOS OSCAR", "PREMIOS EMMY", "PREMIO GLOBO DE ORO" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +128,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
         });
 
         jTextField2.setColumns(20);
+        jTextField2.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -134,6 +137,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         generoGroup.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 12)); // NOI18N
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("MASCULUINO");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +148,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         generoGroup.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 12)); // NOI18N
         jRadioButton3.setText("FEMENINO");
         jRadioButton3.setToolTipText("");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -153,6 +158,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
         });
 
         jTextField4.setColumns(20);
+        jTextField4.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -179,6 +185,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
         jLabel9.setText("Números de nominaciones:");
 
         jTextField5.setColumns(5);
+        jTextField5.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -200,6 +207,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
         jLabel8.setText("Ingrese el nombre del actor:");
 
         jTextField6.setColumns(20);
+        jTextField6.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 14)); // NOI18N
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
@@ -217,7 +225,7 @@ public class Ventana_Actor extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(64, 64, 64))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -231,9 +239,9 @@ public class Ventana_Actor extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jRadioButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)

@@ -84,12 +84,30 @@ public class Personaje {
         this.descripcionPersonaje = descripcionPersonaje;
     }
 
+    private String SeleccionRol() {
+        var retorno = "";
+
+        switch (this.rol) {
+            case "PROTAGONISTA":
+                retorno = "Es un personaje principal";
+                break;
+            case "ANTAGONISTA":
+                retorno = "Es un personaje secundario";
+                break;
+            case "COPROTAGONISTA":
+                retorno = "Es un personaje de reparto";
+                break;
+        }
+
+        return retorno;
+    }
+
     @Override
     public String toString() {
         return "Personaje{" + "nombrePersonaje=" + nombrePersonaje
                 + ", film=" + film.getNombrePelicula() + ", interprete="
                 + interprete.getNombreActor() + ", edadPersonaje="
-                + edadPersonaje + ", rol=" + rol + ", calificacion=" + calificacion
+                + edadPersonaje + ", rol=" + rol + " el personaje: " + this.SeleccionRol() + ", calificacion=" + calificacion
                 + ", descripcionPersonaje=" + descripcionPersonaje + '}';
     }
 
